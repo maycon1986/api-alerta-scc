@@ -1,0 +1,97 @@
+{
+  "notificationConfigName": "organizations/136188092141/locations/global/notificationConfigs/alertas-findings",
+  "finding": {
+    "name": "organizations/136188092141/sources/8698543440261372459/locations/global/findings/4a8911071affe28defe3a02757fd9335",
+    "canonicalName": "projects/114473766539/sources/8698543440261372459/locations/global/findings/4a8911071affe28defe3a02757fd9335",
+    "parent": "organizations/136188092141/sources/8698543440261372459/locations/global",
+    "resourceName": "//compute.googleapis.com/projects/parkingplus-enterprise-277617/zones/us-central1-f/instances/zabbix-new",
+    "state": "ACTIVE",
+    "category": "Instance that exposes many valued resources",
+    "securityMarks": {
+      "name": "organizations/136188092141/sources/8698543440261372459/locations/global/findings/4a8911071affe28defe3a02757fd9335/securityMarks"
+    },
+    "eventTime": "2026-09-16T16:36:57.542145Z",
+    "createTime": "2025-10-13T22:09:04.841Z",
+    "severity": "CRITICAL",
+    "mute": "UNDEFINED",
+    "findingClass": "CHOKEPOINT",
+    "muteUpdateTime": "1970-01-01T00:00:00Z",
+    "contacts": {
+      "security": {
+        "contacts": [{
+          "email": "rafael@wps-sa.com.br"
+        }, {
+          "email": "alexandre@wps-sa.com.br"
+        }, {
+          "email": "arnaldo@wps-sa.com.br"
+        }]
+      },
+      "technical": {
+        "contacts": [{
+          "email": "rafael@wps-sa.com.br"
+        }, {
+          "email": "alexandre@wps-sa.com.br"
+        }, {
+          "email": "arnaldo@wps-sa.com.br"
+        }]
+      }
+    },
+    "parentDisplayName": "Risk Engine",
+    "description": "An attacker who succeeds with Network Access, Network Connect, Transmit, Modify Application and Full Access on the asset zabbix-new would benefit from that when targeting other assets as well. Therefore, mitigations applied to this asset are expected to have positive effects on the security posture of the environment in general as well.",
+    "nextSteps": "Protecting a Google Compute Engine (GCE) instance from being compromised and used as a pivot point by an attacker requires a layered security approach. Here\u0027s a breakdown of best practices:\n\n__1. Hardening the Instance:__\n- Keep the OS and all software packages updated with the latest security patches.\n- Remove unnecessary software and services.\n- Configure strong passwords or, better yet, use SSH keys for authentication.\n- Implement file integrity monitoring (FIM) to detect unauthorized changes to system files.\n- Use private IP addresses whenever possible.\n- If an external IP is necessary, restrict access using firewall rules to only allow required traffic.\n- Close all unnecessary ports.\n- Use a bastion host for secure remote access.\n- Enable Shielded VM features like Secure Boot, vTPM-enabled Measured Boot, and Integrity Monitoring. These help ensure the instance\u0027s boot process and runtime environment are not tampered with.\n- Use OS Login to manage SSH access through IAM, providing centralized control and auditability.\n- Unless absolutely necessary, disable serial ports to prevent potential unauthorized access.\n\n__2. Network Security:__\n- Use VPCs to isolate your instances and control network traffic.\n- Implement VPC Service Controls to establish security perimeters.\n- Create granular firewall rules that allow only necessary traffic.\n- Regularly review and update firewall rules.\n- Use Cloud Armor to protect web applications from common web attacks.\n\nBy implementing these best practices, you can significantly reduce the risk of your GCE instances being compromised and used as pivot points by attackers.\n\nPlease also review the full attack paths which will provide more detail about the actions an attacker is expected to attempt in order to abuse this compute instance.",
+    "attackExposure": {
+      "score": 83.1,
+      "latestCalculationTime": "2026-09-16T07:01:56.151973Z",
+      "attackExposureResult": "organizations/136188092141/simulations/1m35npn1u1nv0/attackExposureResults/4a8911071affe28defe3a02757fd9335",
+      "state": "CALCULATED",
+      "exposedLowValueResourcesCount": 104
+    },
+    "muteInfo": {
+      "staticMute": {
+        "state": "UNDEFINED",
+        "applyTime": "1970-01-01T00:00:00Z"
+      }
+    },
+    "groupMemberships": [{
+      "groupType": "GROUP_TYPE_CHOKEPOINT",
+      "groupId": "4a8911071affe28defe3a02757fd9335"
+    }],
+    "chokepoint": {
+      "relatedFindings": ["organizations/136188092141/sources/6042625817219524565/locations/global/findings/8b4336ffa99e8048c10a320749aa3651", "organizations/136188092141/sources/14383147172202101928/locations/global/findings/55c9520caef84cc6cf9b6372fc156e22", "organizations/136188092141/sources/6042625817219524565/locations/global/findings/a00fe13bb97c0fd25325e3c159be604f"]
+    }
+  },
+  "resource": {
+    "name": "//compute.googleapis.com/projects/parkingplus-enterprise-277617/zones/us-central1-f/instances/zabbix-new",
+    "displayName": "zabbix-new",
+    "type": "google.compute.Instance",
+    "cloudProvider": "GOOGLE_CLOUD_PLATFORM",
+    "service": "compute.googleapis.com",
+    "location": "us-central1-f",
+    "gcpMetadata": {
+      "project": "//cloudresourcemanager.googleapis.com/projects/114473766539",
+      "projectDisplayName": "parkingplus-enterprise-277617",
+      "parent": "//cloudresourcemanager.googleapis.com/projects/114473766539",
+      "parentDisplayName": "parkingplus-enterprise-277617",
+      "folders": [{
+        "resourceFolder": "//cloudresourcemanager.googleapis.com/folders/454968607243",
+        "resourceFolderDisplayName": "Suporte Central"
+      }],
+      "organization": "organizations/136188092141"
+    },
+    "resourcePath": {
+      "nodes": [{
+        "nodeType": "GCP_PROJECT",
+        "id": "projects/114473766539",
+        "displayName": "parkingplus-enterprise-277617"
+      }, {
+        "nodeType": "GCP_FOLDER",
+        "id": "folders/454968607243",
+        "displayName": "Suporte Central"
+      }, {
+        "nodeType": "GCP_ORGANIZATION",
+        "id": "organizations/136188092141"
+      }]
+    },
+    "resourcePathString": "organizations/136188092141/folders/454968607243/projects/114473766539"
+  }
+}
