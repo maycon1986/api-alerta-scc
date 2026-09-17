@@ -12,5 +12,6 @@ Select a Cloud Pub/Sub topi: "Caso não estaja criado, crie o topico"
 
 ```Criação da function```
 ```
+Adicione o numero do grupo do whatsapp no arquivo /api/.env
 Ajuste o script-function.sh com as informações do seu ambiente
 ```
