@@ -34,7 +34,7 @@ def receber_mensagem(cloud_event: CloudEvent) -> None:
         f"*SCORE:* {score}\n"
     )
  
-    webhook_url = "https://alerta-whatsapp-geral-929334332762.us-east4.run.app/alerta"
+    webhook_url = "<url da api do whatsapp>"
  
     payload = {
         "number": os.getenv("NUMBER"),
